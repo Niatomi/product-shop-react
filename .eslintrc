@@ -1,8 +1,58 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
-    "rules": {
-        "semi": ["error", "never"],
-        "quotes": [2, "single"]
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "no-trailing-spaces": "warn",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 0
+      }
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "@typescript-eslint/object-curly-spacing": "off",
+    "react/jsx-curly-spacing": [
+      "warn",
+      {
+        "when": "always",
+        "children": {
+          "when": "always"
+        }
+      }
+    ],
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 1
+      }
+    ],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ]
+  }
 }
